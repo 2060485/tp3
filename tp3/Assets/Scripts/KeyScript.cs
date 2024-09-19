@@ -5,14 +5,17 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     public Animator doorAnimator;
+    int keyCount = 0;
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.tag == "Player")
         {
-            int currentKeyCount = doorAnimator.GetInteger("keyCount");
-            doorAnimator.SetInteger("keyCount", currentKeyCount + 1);
+            //Calcul du nombre de clés trouvées
+            keyCount = doorAnimator.GetInteger("keysTaken");
+            doorAnimator.SetInteger("keysTaken", keyCount + 1);
 
+            //Destruction de l'objet Clé lors du contact avec le joueur
             Destroy(gameObject);
             Debug.Log("Key collected!");
         }

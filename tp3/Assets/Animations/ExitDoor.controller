@@ -63,7 +63,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: keyCount
+    m_ConditionEvent: keysTaken
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9217523859385080867}
@@ -146,7 +146,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: keyCount
+  - m_Name: keysTaken
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0

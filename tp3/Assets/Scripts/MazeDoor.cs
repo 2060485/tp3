@@ -16,6 +16,7 @@ public class MazeDoor : MonoBehaviour
     {
         if ((other.CompareTag("Player")))
         {
+            //Fermeture de la porte
             doorAnimator.SetBool("doorClosed",true);
             Debug.Log("Le joueur est entré dans la zone de trigger!");
         }
