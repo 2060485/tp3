@@ -13,6 +13,7 @@ public class KeyScript : MonoBehaviour
         {
             //Calcul du nombre de clés trouvées
             keyCount = doorAnimator.GetInteger("keysTaken");
+            //Code inspiré de l'api unity https://docs.unity3d.com/ScriptReference/Animator.GetInteger.html
             doorAnimator.SetInteger("keysTaken", keyCount + 1);
 
             //Destruction de l'objet Clé lors du contact avec le joueur
